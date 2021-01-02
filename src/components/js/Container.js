@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Route } from "react-router-dom";
+import { HashRouter, Route } from "react-router-dom";
 
 import Navbar from "./Navbar";
 import Todos from "./Todos";
@@ -8,7 +8,7 @@ import EditTodo from "./EditTodos";
 
 export default function Container() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Navbar />
       <Route exact path="/">
         <Todos />
@@ -19,6 +19,6 @@ export default function Container() {
       <Route path="/editTodo/:id">
         <EditTodo />
       </Route>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
